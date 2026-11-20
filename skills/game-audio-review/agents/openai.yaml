@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Audio Review"
+  short_description: "Create, tune, and preview game sound effects"
+  default_prompt: "Use $game-audio-review to work on this game's sound effects and open the updated sound preview page so I can listen and compare."

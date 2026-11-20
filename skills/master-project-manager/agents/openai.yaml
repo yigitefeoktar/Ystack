@@ -1,0 +1,7 @@
+interface:
+  display_name: "Master Project Manager"
+  short_description: "Coordinate project chats without writing code"
+  default_prompt: "Use $master-project-manager to make this chat the manager of this project. Reuse and message its implementation chats, and create new implementation chats as needed."
+policy:
+  allow_implicit_invocation: false
+

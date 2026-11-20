@@ -1,0 +1,43 @@
+---
+name: crazygames-basic-launch
+description: Prepare a web game for CrazyGames Basic Launch, verify its build and media, and prepare Developer Portal pages for approval. Use when explicitly invoked or when the user asks to prepare, upload, or publish a game on CrazyGames (also written "Crazy Games"), such as "put the game on Crazy Games", including clear follow-ups to that launch work. Do not activate for a generic game release or a passing mention of CrazyGames. Preserve the workflow's separate requirements for legal acceptance and final submission.
+---
+
+# CrazyGames Basic Launch
+
+Prepare a game-specific, verified Basic Launch draft without treating a prior game's settings or artifacts as defaults. This skill does not cover Full Launch SDK integration or post-approval operations. Follow the repository's `AGENTS.md` and preserve unrelated work. Before acting, check the current [technical](https://docs.crazygames.com/requirements/technical/), [gameplay](https://docs.crazygames.com/requirements/gameplay/), [cover/video](https://docs.crazygames.com/requirements/game-covers/), and [Basic Implementation](https://docs.crazygames.com/requirements/intro/) requirements; the portal and limits can change.
+
+## Gather the launch inputs
+
+Use the named Codex project to identify the repository when available. Verify the repository, build command and output directory, platform-specific configuration, and whether the user wants preparation only or an authenticated portal draft. Confirm the public title against the existing game independently of the Codex project name. Ask before changing a player-facing title, subtitle, branding, or menu layout. Resolve the category, relevant tags, description, controls, supported devices and orientation, fullscreen behavior, privacy or terms destination when applicable, three cover images, and two representative gameplay previews. Use facts evident from the game and user-supplied assets; ask only for missing or consequential choices. Never reuse another game's title, tags, description, controls, analytics ID, or media paths.
+
+## Prepare and verify the build
+
+1. Inspect Git status and project instructions. Keep necessary Basic Launch changes in a local release copy by default and preserve gameplay and layout. A CrazyGames upload request authorizes uploading the compiled build to CrazyGames. GitHub commits, pushes, and other deployments require separate user authorization. If the game sends analytics, ensure production events are not tagged as test data and use the intended production analytics app. Do not create or switch an external analytics application without authorization. If the game collects additional personal data or the user requests a notice, add an unobtrusive Terms and/or Privacy notice that reflects the actual build. Follow the user's placement choices and verify that the notice is visible and its destination opens in the hosted game on desktop and mobile.
+2. Run the repository's relevant lint, tests, and fresh production build. Upload the build **output**, not source files. Confirm `index.html` at the upload root and all JS/CSS/assets under their relative paths; do not hardcode build-hashed filenames. Count files and sizes. Current Basic limits are 1,500 files, 250 MB total, and 50 MB initial download; without the SDK the total bundle is used for the 50 MB limit. Aim for 20 MB or less for mobile-homepage eligibility. The SDK is optional in Basic Launch and ads are disabled. Recheck the linked requirements before relying on these figures.
+3. Exercise the production build and its tutorial/core loop, win/loss/restart paths, keyboard, mouse and touch controls, audio toggle, desktop and mobile sizes/orientation, and fullscreen. Check Chrome and Edge, readable English text, console errors, PEGI 12 suitability, and the absence of external ads or login. Verify the game works on CrazyGames origins if it uses a sitelock. Use a local production preview only when compatible with repository instructions; otherwise use an available deployment or portal preview. Do not claim QA passed from a successful build alone.
+
+## Prepare media and metadata
+
+- Prepare three consistent covers: landscape 1920×1080, portrait 800×1200, and square 800×800. No borders, unauthorized artwork, store icons, or promotional phrases. Match the existing menu's title, font, and colors. Confirm exact dimensions, inspect all three final sizes, and show them together for user approval before upload. When the user approves the artwork and requests lettering changes, preserve the composition and show the revised covers for approval.
+- Prepare landscape 16:9 and portrait 2:3 gameplay previews, each at most 50 MB and no more than 20 seconds (target 15–20 seconds). Use real, representative gameplay with no sound, default mouse cursor, black bars, opening/logo transition, promotional text, or manual speed-up. Verify both videos visually and technically. Follow the current [media requirements](https://docs.crazygames.com/requirements/game-covers/) if they differ.
+- Draft description and controls from observed gameplay, not from an earlier game. Obtain category, tags, orientation, and optional store/marketing fields from the user or reliable game facts; leave optional fields blank if not applicable. Do not assert PEGI 12 compliance on the developer's behalf.
+
+## Complete the Developer Portal draft
+
+Use an authenticated, user-visible browser session and the portal's current UI. Do not request or expose credentials. If upload, browser control, or preview fails, read [browser upload recovery](references/browser-upload-recovery.md).
+
+Reinspect the user's active portal tab before editing and whenever they take over or return after an interruption. Resume at the page they reached. Preserve the values they selected, including mobile orientation, when replacing a build or retrying QA. If rebuilding a reset form, restore the user's last verified choices.
+
+Complete one page at a time. On Upload, QA, Details, and Submit, report the completed fields and checks, show reviewable evidence where available, and identify any remaining issue or user action. Wait for the user's approval of the current page before clicking Save, Continue, or another control that advances it. If the user completes a page themselves, continue from their current page.
+
+1. Upload the **latest** production build while preserving directory structure. Inspect the attached file tree and report that Upload is ready. After approval, save the page and launch the CrazyGames preview. Test the actual hosted game, including desktop and supported mobile modes and browser compatibility. Do not mark a QA answer `Yes` without evidence.
+2. On the QA step, complete only checks that have been verified (size, gameplay, domains, browsers, devices, ads, login, and privacy notice when applicable). Fix failures in scope and rebuild/reupload before proceeding.
+3. Enter the game-specific category, tags, description, controls, orientation, fullscreen, and any applicable optional details. Upload the three covers one at a time, accept the intended full-image crop without accidental pan/zoom, and wait for a visible thumbnail after each. Upload both videos and wait until both upload and conversion have finished. Re-read page state after every file; a closed file chooser is not proof of success.
+4. Before leaving Details, confirm all three cover thumbnails, completed video controls (such as `Update`), no remaining upload/conversion indicators or validation errors, and the entered metadata. Show the completed Details page for approval. After approval, use the portal's save or continue action and verify the assets and fields persist on the next step. Do not refresh or switch to a duplicate unsaved tab during uploads.
+
+Stop at the final submission page. Report any billing details, Terms and Conditions, or age-rating confirmation that the developer must personally complete. Do not accept legal terms, attest PEGI suitability, enter billing details, or press the final submission button on the user's behalf. A separate, specific instruction to submit can authorize the final button only after the user has personally completed those prerequisites and the current page state has been checked again.
+
+## Report the handoff
+
+State which build was uploaded, production-build and portal-preview checks, metadata/media completion, whether Details was saved and persisted, the current portal step, unresolved issues, and the exact user action needed for submission. Do not call a saved draft a submitted or approved game. Do not commit generated screenshots/videos or temporary media unless the user explicitly includes them in the repository change.

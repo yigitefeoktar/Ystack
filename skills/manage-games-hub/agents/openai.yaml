@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Games Hub"
+  short_description: "Add or update games in the GitHub catalogue"
+  default_prompt: "Use $manage-games-hub to add a game or update an existing Games Hub entry safely."

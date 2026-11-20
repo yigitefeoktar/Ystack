@@ -1,0 +1,25 @@
+html:has(.sound-preview-page), html:has(.sound-preview-page) body {
+  overflow-y: auto;
+  touch-action: pan-y;
+  user-select: text;
+  -webkit-user-select: text;
+}
+.sound-preview-page { min-height: 100vh; padding: 24px; background: #f8fafc; color: #0f172a; font: 16px/1.5 Arial, sans-serif; }
+.sound-preview-page, .sound-preview-page * { box-sizing: border-box; }
+.sound-preview-column { width: 100%; max-width: 672px; margin: 0 auto; }
+.sound-preview-page h1 { margin: 0 0 8px; font-size: 24px; font-weight: 700; line-height: 1.33; }
+.sound-preview-page h2 { margin: 0 0 12px; font-size: 18px; font-weight: 700; }
+.sound-preview-page p { margin: 0; }
+.sound-preview-page .sound-preview-status { margin: 16px 0; min-height: 24px; font-weight: 600; }
+.sound-preview-page section { margin: 24px 0 0; }
+.sound-preview-page ul { margin: 0; padding: 0; list-style: none; }
+.sound-preview-page li + li { margin-top: 8px; }
+.sound-preview-row { display: flex; align-items: center; gap: 16px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; background: white; }
+.sound-preview-row button { flex-shrink: 0; padding: 8px 16px; border: 1px solid #94a3b8; border-radius: 4px; background: white; color: #0f172a; font: inherit; cursor: pointer; }
+.sound-preview-row button:hover:not(:disabled) { background: #f1f5f9; }
+.sound-preview-row button:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+.sound-preview-row button:disabled { opacity: .5; cursor: default; }
+.sound-preview-label { font-weight: 600; }
+.sound-preview-description, .sound-preview-comparison-description { color: #475569; font-size: 14px; }
+.sound-preview-page .sound-preview-comparison-description { margin-bottom: 12px; }
+.sound-preview-page a { display: inline-block; margin-top: 24px; color: #1d4ed8; text-decoration: underline; }

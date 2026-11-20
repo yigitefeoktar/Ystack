@@ -1,0 +1,4 @@
+interface:
+  display_name: "Confirm Task Understanding"
+  short_description: "Confirm on request; clarify real ambiguity"
+  default_prompt: "Use $confirm-task-understanding to restate the task, relevant assumptions, and intended outcome, then wait for my confirmation before implementing."

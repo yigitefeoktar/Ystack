@@ -1,0 +1,4 @@
+interface:
+  display_name: "ByteBrew Game Analytics"
+  short_description: "Safe, low-overhead ByteBrew game analytics"
+  default_prompt: "Use $bytebrew-game-analytics to add or verify observer-only ByteBrew analytics without changing gameplay."
