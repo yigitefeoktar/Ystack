@@ -86,6 +86,8 @@ Adopt the parts of root `AGENTS.md` you want. It intentionally prefers:
 
 These defaults do not imply that SVGs cannot be used to render previews, that every request needs multiple proposals, or that Codex should invent a URL when no server exists. The skills do not replace the host's higher-priority instructions or tool restrictions.
 
+The global file also records the author's standing request to synchronize instruction and published-skill changes to this repository in the same task. That maintenance rule applies to the author's own setup. If you adopt the global file, replace its repository with your own fork or remove that section; the distributed file does not give you permission to write to the author's repository. Keep private configuration and machine details out of any public sync.
+
 ## Updates, backups, and removal
 
 To update, pull the repository, review the diff, and rerun the installer with the same destination/selection plus `--force`. Existing skill folders are moved to `<skills-directory-parent>/.ystack-backups/<timestamp>/skills/`. If global instructions are explicitly replaced, their backup goes to `<codex-home>/.ystack-backups/<timestamp>/AGENTS.md`. Paths are printed during installation.

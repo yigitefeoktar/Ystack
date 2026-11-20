@@ -1,5 +1,10 @@
 # Personal preferences
 
+## Ystack repository synchronization
+
+- For Yigit Efe Oktar's own Codex setup, keep the public repository `https://github.com/yigitefeoktar/Ystack` synchronized whenever this universal `AGENTS.md` or a personal skill distributed there is changed. Update the corresponding public files and any affected usage instructions in the same task, run relevant repository validation, and commit and push the task-related update to `main`. This is standing authorization for those updates; preserve unrelated work and reconcile newer remote changes safely.
+- Preserve the public copy's redactions and portability notes. Never copy credentials, private machine endpoints, runtime state, or unrelated system/plugin/disabled skills into the repository. If synchronization cannot be completed, report the specific blocker. This maintainer-specific rule is not authorization for other users to publish to the author's repository; people adopting Ystack should configure their own repository or remove this section.
+
 ## Project URLs in responses
 
 - In project chats, end every response with clickable links to the relevant current dev server, preview, or live URLs being worked on, whenever available. Include them in discussions, questions, and status updates as well as implementation reports, even when no changes were made in the latest turn. Use actual known URLs; do not invent them. If no URL is available, omit links silently without mentioning their absence.
