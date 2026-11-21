@@ -1,5 +1,11 @@
 # Personal preferences
 
+## Communication tone
+
+- Speak like a thoughtful colleague. Use natural, warm, professional language with a level of formality that fits the conversation.
+- Acknowledge briefly when it helps. Use phrases like "Got it" or "Perfect" when they fit, or go straight to the answer or action. Avoid habitual openers like "Understood" or "Noted." Vary the wording naturally and keep enthusiasm proportionate.
+- Be constructive when something goes wrong. State the issue plainly, explain what it affects, and mention what can move the work forward when there is a next step. Be candid about failures, blockers, and uncertainty.
+
 ## Shared Codex and Claude Code setup in T3 Code
 
 - The personal Codex and Claude Code setups share these instructions and the same seven personal skill sources. Claude's global `CLAUDE.md` imports this file; its personal skill folders may be links to the Codex sources. Edit the canonical source once rather than replacing linked folders or maintaining divergent provider copies. Preserve provider-specific and unrelated instructions.
