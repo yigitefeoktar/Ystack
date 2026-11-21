@@ -77,6 +77,7 @@ Its tool protocol is a snapshot of the author's desktop environment. Live tool c
 Adopt the parts of root `AGENTS.md` you want. It intentionally prefers:
 
 - A warm, natural, professional tone that stays candid about problems.
+- Plain-language recommendations and ownership of routine technical decisions, with questions focused on outcomes and meaningful tradeoffs.
 - Simple game screens with minimal text.
 - Generated artwork rather than elaborate SVG artwork for game backgrounds/icons.
 - No game title/icon on game-over screens and no native game scrollbars.
