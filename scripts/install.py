@@ -25,6 +25,7 @@ def install(args):
     if args.agents:
         targets.append((ROOT / "AGENTS.md", codex_home / "AGENTS.md"))
         targets.append((ROOT / "T3_SETUP.md", codex_home / "T3_SETUP.md"))
+        targets.append((ROOT / "YSTACK_MAINTENANCE.md", codex_home / "YSTACK_MAINTENANCE.md"))
 
     # Preflight the entire selection before writing anything.
     conflicts = []
@@ -88,7 +89,7 @@ def main():
                         help="Destination skill directory (default: ~/.agents/skills).")
     parser.add_argument("--codex-home", default=os.environ.get("CODEX_HOME") or str(Path.home() / ".codex"),
                         help="Global instructions destination; used only with --agents.")
-    parser.add_argument("--agents", action="store_true", help="Also install the personal AGENTS.md.")
+    parser.add_argument("--agents", action="store_true", help="Also install the personal AGENTS.md and its companion guides.")
     parser.add_argument("--force", action="store_true", help="Back up and replace existing destinations.")
     parser.add_argument("--dry-run", action="store_true", help="Show actions without changing files.")
     args = parser.parse_args()

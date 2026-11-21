@@ -17,6 +17,4 @@ Both Codex and Claude Code are used through T3 Code. Claude's global CLAUDE.md i
 - After creating or pushing a PR, immediately link it with link_pull_request/link_pull_requests. Use watch_pull_request for requested PR monitoring or work blocked on PR checks/reviews, following the live handback/unwatch contract. Do not substitute shell polling.
 - Do not invent capabilities, successful deployment, browser/audio verification, or model identities. Preserve skill-specific activation, scope, and external-action boundaries.
 
-## Maintaining the shared setup
-
-Update canonical personal files and their corresponding public Ystack copies in the same task. Keep private machine details and runtime coordination notes out of Git. Global instructions are AGENTS.md; the Claude adapter is CLAUDE.md; this guide records host-specific decisions so later changes need not rediscover the setup. Verify junctions/imports and live tool availability again if evidence changes. Installing this guide does not activate manager mode or authorize new agents/chats.
+For changes to this shared setup, see [YSTACK_MAINTENANCE.md](YSTACK_MAINTENANCE.md).

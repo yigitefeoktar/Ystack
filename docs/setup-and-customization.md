@@ -88,11 +88,11 @@ Adopt the parts of root `AGENTS.md` you want. It intentionally prefers:
 
 These defaults do not imply that SVGs cannot be used to render previews, that every request needs multiple proposals, or that Codex should invent a URL when no server exists. The skills do not replace the host's higher-priority instructions or tool restrictions.
 
-The global file also records the author's standing request to synchronize instruction and published-skill changes to this repository in the same task. That maintenance rule applies to the author's own setup. If you adopt the global file, replace its repository with your own fork or remove that section; the distributed file does not give you permission to write to the author's repository. Keep private configuration and machine details out of any public sync.
+The global file points to the separate [Ystack maintenance guide](../YSTACK_MAINTENANCE.md) for edits to the author's shared instructions or published skills. If you adopt the global file, remove the author-specific pointer or adapt the guide and point it at your own fork.
 
 ## Updates, backups, and removal
 
-To update, pull the repository, review the diff, and rerun the installer with the same destination/selection plus `--force`. Existing skill folders are moved to `<skills-directory-parent>/.ystack-backups/<timestamp>/skills/`. If global instructions are explicitly replaced, their backup goes to `<codex-home>/.ystack-backups/<timestamp>/AGENTS.md`. Paths are printed during installation.
+To update, pull the repository, review the diff, and rerun the installer with the same destination/selection plus `--force`. Existing skill folders are moved to `<skills-directory-parent>/.ystack-backups/<timestamp>/skills/`. If global instructions are explicitly replaced, backups for `AGENTS.md` and its companion guides go to `<codex-home>/.ystack-backups/<timestamp>/`. Paths are printed during installation.
 
 To restore, close/restart the affected Codex session as needed and copy the desired backed-up file/folder back to its original destination. Check for subsequent local edits first. For removal, remove only the skill folders you installed from Ystack, preserving any local customizations. Global instructions require separate manual restoration; the installer never silently merges them.
 
