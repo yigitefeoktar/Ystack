@@ -5,12 +5,14 @@ description: Make game sound-effect work reviewable in a playable sound preview 
 
 # Game Audio Review
 
+In T3 Code with Codex or Claude Code, follow the shared global instructions and `T3_SETUP.md` runtime guide. Use the current session tools instead of assuming Codex desktop APIs or plugins; preserve this skill's activation and authorization boundaries.
+
 Make the active game's sound-effect work easy for Yigit to hear and review, whether adding effects, changing them, fixing playback, comparing alternatives, or auditing audio. Use a simple preview page: a light background, a narrow column of labeled rows, a Play button per sound, one sound at a time, and replacement comparisons at the top.
 
 ## Scope and discovery
 
 - Work in the user's active game project. Inspect its instructions, Git status, audio entry points, assets, event callers, and existing preview page. Preserve unrelated work.
-- For requested sound-effect work that needs an audible review, prepare or update the preview page and start its local preview when needed, even if the user did not explicitly request a preview page. Reuse this project's running server after verifying its identity; otherwise start a loopback server on an available port and open the page in Codex. Honor explicit read-only or no-server instructions. Do not start another game's project or assume port 3000 belongs to this one.
+- For requested sound-effect work that needs an audible review, prepare or update the preview page and start its local preview when needed, even if the user did not explicitly request a preview page. Reuse this project's running server after verifying its identity; otherwise start a loopback server on an available port and open the page in the current host's supported shared browser when the user requested audition/browser work. Honor explicit read-only or no-server instructions. Do not start another game's project or assume port 3000 belongs to this one.
 - Match the work to the request. For a targeted addition, replacement, tuning, or playback fix, use the relevant sections below and verify the affected cues and mix. Keep the preview catalogue current without turning every small sound change into a full-game audio audit; perform the broader audit when requested or needed to diagnose the issue.
 - Follow the project's checks, commit, and deployment rules for any requested code or preview UI changes. An audit alone does not authorize changing the game's audio. Do requested fixes and selected replacements without asking for approval again.
 - Inventory every audio cue actually used in the game: UI feedback, orders, combat, abilities, outcomes, ambient loops, music, and voices where present. Map each to its trigger and playback function. Distinguish unused assets and trailer-only sounds from active game sounds.
@@ -40,7 +42,7 @@ Give a concise finding per sound or group: **good**, **needs tuning**, or **repl
 - Play the game's real implementations with the same gain/mixer as gameplay. Prepare/resume audio from a real user click. Exclude incidental hover/click cues and background music from isolated effect previews.
 - Each row needs a stable ID, a readable name, a brief description of its trigger, and a Play button. Show starting/playing/last-played status. Prevent accidental overlapping previews. For loops or music, provide a bounded excerpt and stop it afterward.
 - Keep the simple layout and comparison sections. Maintain mouse-wheel and touch scrolling despite global game styles that disable them, keyboard-accessible controls, and access to the last row.
-- Verify in a browser: the inventory is complete, a trusted click unlocks audio, actual output is non-silent, the audio context runs, there are no playback errors, and scrolling reaches the bottom. A status timer finishing is not proof that audio played. Open the verified URL in the user's Codex panel and provide its link.
+- Verify in a browser: the inventory is complete, a trusted click unlocks audio, actual output is non-silent, the audio context runs, there are no playback errors, and scrolling reaches the bottom. A status timer finishing is not proof that audio played. Provide the verified preview link; in T3 use the shared preview browser for requested audition/browser work instead of assuming a Codex panel exists.
 
 ## When the user asks for options
 

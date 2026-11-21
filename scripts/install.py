@@ -24,6 +24,7 @@ def install(args):
     targets = [(ROOT / "skills" / name, skills_dir / name) for name in selected]
     if args.agents:
         targets.append((ROOT / "AGENTS.md", codex_home / "AGENTS.md"))
+        targets.append((ROOT / "T3_SETUP.md", codex_home / "T3_SETUP.md"))
 
     # Preflight the entire selection before writing anything.
     conflicts = []

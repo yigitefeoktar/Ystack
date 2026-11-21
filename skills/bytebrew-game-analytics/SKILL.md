@@ -5,6 +5,8 @@ description: Add, audit, verify, or repair observer-only ByteBrew game analytics
 
 # ByteBrew Game Analytics
 
+In T3 Code with Codex or Claude Code, follow the shared global instructions and `T3_SETUP.md` runtime guide. Use the current session tools instead of assuming Codex desktop APIs or plugins; preserve this skill's activation and authorization boundaries.
+
 Build useful gameplay analytics without letting analytics influence the game. Treat the current gameplay behavior as immutable unless the user separately requests a gameplay change.
 
 Read [references/bytebrew-guide.md](references/bytebrew-guide.md) before integrating the SDK, designing a schema, controlling the ByteBrew dashboard, or diagnosing missing data. Check ByteBrew's official platform documentation before using exact SDK APIs because package names and methods can change.

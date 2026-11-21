@@ -73,6 +73,7 @@ class InstallTests(unittest.TestCase):
         self.assertEqual(global_file.read_text(), "my existing rules")
         self.run_installer("--skill", "confirm-task-understanding", "--agents", "--force")
         self.assertEqual(global_file.read_bytes(), (ROOT / "AGENTS.md").read_bytes())
+        self.assertEqual((self.codex / "T3_SETUP.md").read_bytes(), (ROOT / "T3_SETUP.md").read_bytes())
         backups = list((self.codex / ".ystack-backups").rglob("AGENTS.md"))
         self.assertEqual(len(backups), 1)
         self.assertEqual(backups[0].read_text(), "my existing rules")

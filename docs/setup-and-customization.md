@@ -16,7 +16,7 @@ The descriptions guide selection; they are not deterministic event hooks. Match 
 | Game Deployment | Your own GitHub repository and Vercel project, authenticated CLI/connectors as available, and the project's build tools |
 | CrazyGames Basic Launch | Your own CrazyGames developer account and a supported authenticated browser/upload session |
 | Manage Games Hub | Your own hub repository, a saved Codex desktop project, project/chat creation tools, and the hub's deployment access |
-| Master Project Manager | Codex desktop project/chat tools and a verified saved project; additional workers use their own normal project permissions |
+| Master Project Manager | current host project/chat tools (T3 or legacy Codex desktop) and a verified saved project; additional workers use their own normal project permissions |
 
 This repository installs instructions and helper files. It does not install connectors, provision accounts, copy credentials, start a backend, or grant access to another user's repositories. If the required tools are unavailable, the skill should report the limitation rather than simulate a successful action.
 
@@ -68,7 +68,7 @@ Requests to create, replace, tune, or repair effects use the same preview workfl
 
 ### Manager mode
 
-Master Project Manager is a persistent, explicit role for one project. It routes implementation to workers, maintains compact coordination notes, and normally returns after dispatch rather than waiting for completion. Do not add that role to global or project `AGENTS.md`: ordinary workers must remain ordinary workers.
+Under T3 Code, follow the root T3_SETUP.md guide and the T3 section of the manager tool protocol; the legacy desktop section does not apply. Master Project Manager is a persistent, explicit role for one project. It routes implementation to workers, maintains compact coordination notes, and normally returns after dispatch rather than waiting for completion. Do not add that role to global or project `AGENTS.md`: ordinary workers must remain ordinary workers.
 
 Its tool protocol is a snapshot of the author's desktop environment. Live tool contracts take precedence. In particular, use current supported status/wait tools for following a specific task to completion; do not create an automation to track a specific task's milestone or completion. Scheduling is for genuinely future reminders, recurring reports, and standing alerts when requested.
 

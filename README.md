@@ -129,3 +129,11 @@ When changing a skill, keep its activation description accurate and update its s
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+## T3 Code, Codex, and Claude Code
+
+See [T3_SETUP.md](T3_SETUP.md) for the verified shared-source arrangement and current host-specific workflow. [CLAUDE.md](CLAUDE.md) is the Claude adapter: its relative import assumes the default sibling `.claude` and `.codex` homes. Preserve existing Claude instructions and adjust that import for a custom Codex home. Install the seven skill directories in Claude's personal skills directory, or link them to the same canonical sources used by Codex; do not replace existing linked folders blindly. Do not copy the author's synced third-party skills.
+
+`--agents` installs both AGENTS.md and T3_SETUP.md, backing up existing files with `--force`. It does not overwrite your Claude adapter or install Claude junctions. For Claude-only use, adapt the import to the location of your shared instructions and keep T3_SETUP.md alongside them. Invocation syntax and available tools depend on the provider/host; explicit-only manager behavior must also be respected when a host does not enforce Codex YAML metadata.
+
+The host guide covers T3 project/thread tools, provider-aware delegation, workspace isolation, inline HTML visuals, shared-browser use, PR linking/watching, and secret handling. It does not grant permission to create chats or activate manager mode merely by installation.

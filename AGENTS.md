@@ -1,5 +1,12 @@
 # Personal preferences
 
+## Shared Codex and Claude Code setup in T3 Code
+
+- The personal Codex and Claude Code setups share these instructions and the same seven personal skill sources. Claude's global `CLAUDE.md` imports this file; its personal skill folders may be links to the Codex sources. Edit the canonical source once rather than replacing linked folders or maintaining divergent provider copies. Preserve provider-specific and unrelated instructions.
+- In T3 Code, read the sibling `T3_SETUP.md` when setup context is missing or a host-specific workflow is needed. Use current session tool contracts, not remembered Codex desktop API names. Provider/model availability and permissions must be verified, not inferred from this file.
+- Ordinary work needs no orchestration. Use delegation only when requested or required by an applicable workflow. Separate top-level chats from child agents; preserve the user's selected provider/model and use T3-managed workspace isolation. Never substitute another provider silently.
+- Use T3's supported HTML presentation tools for requested in-chat visuals, code rendering for exported assets, and its shared browser only for requested browser work. Follow current host instructions for thread receipts, waiting, PR links, secrets, and scheduling. Do not assume Codex desktop panels, connectors, or completion callbacks exist in T3.
+
 ## Ystack repository synchronization
 
 - For Yigit Efe Oktar's own Codex setup, keep the public repository `https://github.com/yigitefeoktar/Ystack` synchronized whenever this universal `AGENTS.md` or a personal skill distributed there is changed. Update the corresponding public files and any affected usage instructions in the same task, run relevant repository validation, and commit and push the task-related update to `main`. This is standing authorization for those updates; preserve unrelated work and reconcile newer remote changes safely.

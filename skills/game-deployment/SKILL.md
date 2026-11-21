@@ -5,6 +5,8 @@ description: Deploy or migrate Yigit's games from GitHub main to Vercel, with a 
 
 # Game deployment
 
+In T3 Code with Codex or Claude Code, follow the shared global instructions and `T3_SETUP.md` runtime guide. Use the current session tools instead of assuming Codex desktop APIs or plugins; preserve this skill's activation and authorization boundaries.
+
 Use GitHub `main` as the source of truth. Publish the frontend on Vercel. Run a persistent multiplayer backend on the Windows PC only when the repository explicitly enables it. These replace the old main-vercel-workflow and github-cloud-run-deploy instructions.
 
 ## Inspect before acting

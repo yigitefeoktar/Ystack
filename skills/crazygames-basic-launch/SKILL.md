@@ -5,6 +5,8 @@ description: Prepare a web game for CrazyGames Basic Launch, verify its build an
 
 # CrazyGames Basic Launch
 
+In T3 Code with Codex or Claude Code, follow the shared global instructions and `T3_SETUP.md` runtime guide. Use the current session tools instead of assuming Codex desktop APIs or plugins; preserve this skill's activation and authorization boundaries.
+
 Prepare a game-specific, verified Basic Launch draft without treating a prior game's settings or artifacts as defaults. This skill does not cover Full Launch SDK integration or post-approval operations. Follow the repository's `AGENTS.md` and preserve unrelated work. Before acting, check the current [technical](https://docs.crazygames.com/requirements/technical/), [gameplay](https://docs.crazygames.com/requirements/gameplay/), [cover/video](https://docs.crazygames.com/requirements/game-covers/), and [Basic Implementation](https://docs.crazygames.com/requirements/intro/) requirements; the portal and limits can change.
 
 ## Gather the launch inputs

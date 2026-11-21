@@ -5,6 +5,8 @@ description: Confirm task understanding when explicitly invoked, or clarify cons
 
 # Confirm Task Understanding
 
+In T3 Code with Codex or Claude Code, follow the shared global instructions and `T3_SETUP.md` runtime guide. Use the current session tools instead of assuming Codex desktop APIs or plugins; preserve this skill's activation and authorization boundaries.
+
 ## Purpose
 
 Help the user deliberately check a task interpretation, or resolve uncertainty that could cause meaningfully different work. Keep clarification conversational and proportional.

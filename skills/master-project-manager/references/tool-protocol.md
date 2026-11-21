@@ -1,8 +1,20 @@
-# Setup and desktop tool contracts
+# Setup and host tool contracts
 
 Read only the section needed for setup, an unfamiliar tool or a changed contract. Keep established IDs/contracts in context; don't reload this reference every turn. Live tool instructions take precedence.
 
-## Initial activation or identity recovery
+## T3 Code: Codex and Claude Code
+
+When running in T3 Code, use this section and the shared T3_SETUP.md guide instead of the legacy desktop API sections below. Live contracts always win.
+
+Resolve the project with t3_project_list and discover existing owners with t3_thread_search; read relevant threads with t3_thread_read before reporting about them. Store T3 project/thread/environment IDs and exact returned links separately from imported desktop identifiers. Preserve the verified project binding across recovery.
+
+Use t3_thread_send for authorized routing to an existing top-level owner. Create a new top-level owner only on an explicit human request or applicable standing creation grant: t3_thread_launch with the verified projectId and workspaceStrategy type root for a shared checkout. For an authorized worktree, let T3 prepare it with workspaceStrategy and the appropriate base. Retain clientRequestId for safe retries and read or wait after launch as the live contract requires; do not assume timeoutMs 0 snapshots or Codex created-thread directives work here. Mention the exact returned link.
+
+Temporary delegated tasks are distinct from durable owner chats. Use native same-provider delegation where appropriate and delegate_task for cross-provider/settings/background/isolation requirements; inspect orchestrator_capabilities before delegation and follow returned next without polling. New reviews use a new delegate task. Cancel obsolete delegates with task_cancel, not thread interruption. Do not convert a subagent request into a top-level chat.
+
+Keep dispatch-and-return as the default where compatible with live tool contracts. Requested waiting uses current supported thread waits; do not schedule reminders for specific task completion. Use t3_thread_organize when asked to settle/archive a thread. Preserve role, permission, ownership, and concise-handoff rules from SKILL.md. Missing tools mean a concrete blocker, not private endpoint access or manager-side implementation.
+
+## Legacy Codex desktop only: initial activation or identity recovery
 
 On first activation, resolve the saved project with list_projects using the human's choice or verified context. Bind to projectId, not a directory keyword. On cold recovery, retain a verified saved binding and manager identity when trusted context still substantiates them; do not list projects or search for managers again solely because context was compacted. Rediscover only missing, contradictory or invalid identities. In a projectless/ambiguous chat ask for the missing project choice before dispatch.
 

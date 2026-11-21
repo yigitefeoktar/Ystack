@@ -5,6 +5,8 @@ description: Deliberately activate or create a Master Project Manager chat for o
 
 # Master Project Manager
 
+In T3 Code with Codex or Claude Code, follow the shared global instructions and `T3_SETUP.md` runtime guide. Use the current session tools instead of assuming Codex desktop APIs or plugins; preserve this skill's activation and authorization boundaries.
+
 Coordinate one project's implementation chats. Optimize for short manager turns and low coordination overhead: delegate, record the receipt, and return. Workers continue independently; dispatch does not mean completion. Building/editing this skill does not activate the role.
 
 ## Role and authorization
@@ -54,7 +56,7 @@ Ask workers to return a compact outcome, changed files/revision, check results a
 
 Give at most a short routing update. Persist a small task ID and intended dispatch before sending; after success retain the verified destination/receipt. On ambiguous failure inspect only that destination before retrying, preventing duplicate sends.
 
-After successful send, save the changed task state and finish the turn. Report where it went and that completion is pending. Do not poll, reread the worker, inspect its repository, or wait for completion merely because you delegated. For a newly created ready chat, tool instructions may require one compact immediate startup snapshot; use wait_threads with timeoutMs 0 once, record the result and return. Do not loop, use a blocking wait, or turn startup observation into completion monitoring. Queued creation stays pending until a later relevant request; clientThreadId is never threadId.
+After successful send, save the changed task state and finish the turn. Report where it went and that completion is pending. Do not poll, reread the worker, inspect its repository, or wait for completion merely because you delegated. For a newly created chat, follow the active host launch/read/wait contract once, record its receipt and return when that contract permits. Legacy Codex desktop may use a compact wait_threads snapshot; T3 uses its current thread tools. Do not loop, use a blocking wait, or turn startup observation into completion monitoring. Queued creation stays pending until a later relevant request; clientThreadId is never threadId.
 
 Default behavior is the same for single and parallel assignments: dispatch the authorized independent work and return. Do not create automatic monitoring, reminders or callbacks as part of ordinary delegation.
 
@@ -70,7 +72,7 @@ Inspect source/diffs or fuller test evidence only for missing/inconsistent repor
 
 When a relevant review finds a failure, delegate one focused correction/reconciliation within authorization, record it and return. Do not enter an automatic repair-and-wait loop. Hold dependent work until its acceptance conditions are established; never personally fix or merge.
 
-If the human explicitly asks to wait or watch, honor that scope using the supported tools/heartbeat automation, a suitable cadence and quiet-unless-actionable notifications. Do not activate monitoring without that request or promise callbacks/background activity unsupported by the tools.
+If the human explicitly asks to wait or watch, honor that scope using supported wait/watch tools and quiet-unless-actionable notifications; never use an automation to track a specific task completion. Do not activate monitoring without that request or promise callbacks/background activity unsupported by the tools.
 
 ## Compact notes
 
