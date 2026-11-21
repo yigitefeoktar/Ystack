@@ -14,8 +14,9 @@
 
 ## Project URLs in responses
 
-- In project chats, end every response with clickable links to the relevant current dev server, preview, or live URLs being worked on, whenever available. Include them in discussions, questions, and status updates as well as implementation reports, even when no changes were made in the latest turn. Use actual known URLs; do not invent them. If no URL is available, omit links silently without mentioning their absence.
-- Keep these links unobtrusive at the very bottom of the message, on one final line with short neutral labels such as `Dev`, `Preview`, or `Live`, separated by a middle dot when there are multiple links. Do not add a heading, bold emphasis, callout, or repeated promotional wording around them. Repeat a URL in the body only when it is needed to explain the task.
+- In project chats, end the user-facing answer with clickable links only to actual development servers, app previews, or live applications that the agent has worked on, audited, tested, or otherwise handled for that project. Keep including those relevant known app URLs in subsequent answers even when the latest turn made no changes. Merely opening a reference URL does not qualify it for this automatic footer. Do not invent URLs; if no qualifying app URL exists, omit the footer silently.
+- Put the automatic app links on one unobtrusive final line with short neutral labels such as `Dev`, `Preview`, or `Live`, separated by a middle dot for multiple links. Do not add a heading, bold emphasis, callout, or promotional wording. Do not append URL footers or include URLs/links in visible reasoning summaries, progress updates, or intermediate commentary; provide useful links in the user-facing answer instead.
+- These are placement rules, never a reason to withhold a useful URL or link. Always provide requested and relevant links. Repository links, commits, pull requests, documentation, references, and other non-app links belong naturally in the answer body, not in the automatic app footer. App URLs may also appear in the body when needed to answer or explain something; still include the qualifying app footer. Preserve any higher-priority citation or tool-required linking requirements.
 
 ## Game UI design
 
