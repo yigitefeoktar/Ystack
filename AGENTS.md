@@ -29,7 +29,8 @@
 - When proposing visual changes, normally show three meaningfully different options as rendered images, numbered sequentially with short explanations so I can choose. Three is a default, not a fixed requirement: give more or fewer when I ask. Respect an already chosen design; do not reopen settled choices or invent alternatives for nonvisual work.
 - After implementing visual changes, show images of the actual implemented result whenever possible. Include the visual in the response rather than only describing the change or giving a file path.
 - For animation, timing, transitions, or other changes that benefit from motion, show a short video or animated GIF instead of relying only on still images. Present alternatives side by side when that makes comparison easier.
-- Produce previews mainly through code-driven rendering: the game's own renderer/canvas, HTML/CSS, or rendered SVGs. Reuse actual assets and rendering code where practical so the preview represents the proposed or implemented result faithfully.
+- Use rendered SVGs to compare options for small visual changes, including when I ask for many variants. Use image generation for concept options for major game designs or redesigns, such as a complete main menu, an entire HUD, or a major part of a game. Choose the method based on the scope of the design change.
+- To show completed changes, capture or render the actual game using its real assets and code where practical.
 - Avoid computer use for obtaining these images and videos. Prefer direct rendering, headless browser scripts, frame export, and video encoding. Use computer use only when necessary and keep it minimal.
 - Clearly distinguish proposal/mockup renders from renders of implemented changes. A mockup is not evidence that the running game looks or behaves that way.
 - Generated images are preferred for artwork used inside the game UI; code/SVG rendering remains appropriate for producing previews and comparisons.

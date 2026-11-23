@@ -83,7 +83,7 @@ Adopt the parts of root `AGENTS.md` you want. It intentionally prefers:
 - No game title/icon on game-over screens and no native game scrollbars.
 - Normally three rendered visual proposals, with another count whenever requested.
 - Images of actual implemented results, or GIF/video when motion matters.
-- Code-driven preview rendering with minimal computer use.
+- Rendered SVGs for small visual comparisons and image generation for major design proposals. Capture or render the actual game to show completed changes.
 - Only handled development-server, app-preview, or live-app URLs quietly on the final line of user-facing answers; no URLs in reasoning summaries or progress commentary. Other useful links remain in the answer body and must never be withheld because of the footer rule.
 
 These defaults do not imply that SVGs cannot be used to render previews, that every request needs multiple proposals, or that Codex should invent a URL when no server exists. The skills do not replace the host's higher-priority instructions or tool restrictions.
