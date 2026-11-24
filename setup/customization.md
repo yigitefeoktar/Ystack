@@ -68,13 +68,13 @@ Requests to create, replace, tune, or repair effects use the same preview workfl
 
 ### Manager mode
 
-Under T3 Code, follow the root T3_SETUP.md guide and the T3 section of the manager tool protocol; the legacy desktop section does not apply. Master Project Manager is a persistent, explicit role for one project. It routes implementation to workers, maintains compact coordination notes, and normally returns after dispatch rather than waiting for completion. Do not add that role to global or project `AGENTS.md`: ordinary workers must remain ordinary workers.
+Under T3 Code, follow the T3_SETUP.md guide and the T3 section of the manager tool protocol; the legacy desktop section does not apply. Master Project Manager is a persistent, explicit role for one project. It routes implementation to workers, maintains compact coordination notes, and normally returns after dispatch rather than waiting for completion. Do not add that role to global or project `AGENTS.md`: ordinary workers must remain ordinary workers.
 
 Its tool protocol is a snapshot of the author's desktop environment. Live tool contracts take precedence. In particular, use current supported status/wait tools for following a specific task to completion; do not create an automation to track a specific task's milestone or completion. Scheduling is for genuinely future reminders, recurring reports, and standing alerts when requested.
 
 ## Global preferences
 
-Adopt the parts of root `AGENTS.md` you want. It intentionally prefers:
+Adopt the parts of the packaged `AGENTS.md` you want. It intentionally prefers:
 
 - A warm, natural, professional tone that stays candid about problems.
 - Plain-language recommendations and ownership of routine technical decisions, with questions focused on outcomes and meaningful tradeoffs.
@@ -88,7 +88,7 @@ Adopt the parts of root `AGENTS.md` you want. It intentionally prefers:
 
 These defaults do not imply that SVGs cannot be used to render previews, that every request needs multiple proposals, or that Codex should invent a URL when no server exists. The skills do not replace the host's higher-priority instructions or tool restrictions.
 
-The global file points to the separate [Ystack maintenance guide](../YSTACK_MAINTENANCE.md) for edits to the author's shared instructions or published skills. If you adopt the global file, remove the author-specific pointer or adapt the guide and point it at your own fork.
+The global file points to the separate [Ystack maintenance guide](YSTACK_MAINTENANCE.md) for edits to the author's shared instructions or published skills. If you adopt the global file, remove the author-specific pointer or adapt the guide and point it at your own fork.
 
 ## Updates, backups, and removal
 

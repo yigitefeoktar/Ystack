@@ -23,9 +23,9 @@ def install(args):
     codex_home = Path(args.codex_home).expanduser().resolve()
     targets = [(ROOT / "skills" / name, skills_dir / name) for name in selected]
     if args.agents:
-        targets.append((ROOT / "AGENTS.md", codex_home / "AGENTS.md"))
-        targets.append((ROOT / "T3_SETUP.md", codex_home / "T3_SETUP.md"))
-        targets.append((ROOT / "YSTACK_MAINTENANCE.md", codex_home / "YSTACK_MAINTENANCE.md"))
+        targets.append((ROOT / "setup" / "AGENTS.md", codex_home / "AGENTS.md"))
+        targets.append((ROOT / "setup" / "T3_SETUP.md", codex_home / "T3_SETUP.md"))
+        targets.append((ROOT / "setup" / "YSTACK_MAINTENANCE.md", codex_home / "YSTACK_MAINTENANCE.md"))
 
     # Preflight the entire selection before writing anything.
     conflicts = []

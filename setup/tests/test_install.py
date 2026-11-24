@@ -6,7 +6,7 @@ import sys
 import tempfile
 import unittest
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 
 
 class InstallTests(unittest.TestCase):
@@ -19,7 +19,7 @@ class InstallTests(unittest.TestCase):
 
     def run_installer(self, *extra, success=True):
         result = subprocess.run(
-            [sys.executable, str(ROOT / "scripts" / "install.py"),
+            [sys.executable, str(ROOT / "setup" / "install.py"),
              "--skills-dir", str(self.skills), "--codex-home", str(self.codex), *extra],
             text=True, capture_output=True,
         )
@@ -72,10 +72,10 @@ class InstallTests(unittest.TestCase):
         self.assertFalse(self.skills.exists())
         self.assertEqual(global_file.read_text(), "my existing rules")
         self.run_installer("--skill", "confirm-task-understanding", "--agents", "--force")
-        self.assertEqual(global_file.read_bytes(), (ROOT / "AGENTS.md").read_bytes())
-        self.assertEqual((self.codex / "T3_SETUP.md").read_bytes(), (ROOT / "T3_SETUP.md").read_bytes())
+        self.assertEqual(global_file.read_bytes(), (ROOT / "setup" / "AGENTS.md").read_bytes())
+        self.assertEqual((self.codex / "T3_SETUP.md").read_bytes(), (ROOT / "setup" / "T3_SETUP.md").read_bytes())
         maintenance = "YSTACK_MAINTENANCE.md"
-        self.assertEqual((self.codex / maintenance).read_bytes(), (ROOT / maintenance).read_bytes())
+        self.assertEqual((self.codex / maintenance).read_bytes(), (ROOT / "setup" / maintenance).read_bytes())
         backups = list((self.codex / ".ystack-backups").rglob("AGENTS.md"))
         self.assertEqual(len(backups), 1)
         self.assertEqual(backups[0].read_text(), "my existing rules")
@@ -86,7 +86,7 @@ class InstallTests(unittest.TestCase):
 
     def test_source_directory_cannot_be_install_target(self):
         result = subprocess.run(
-            [sys.executable, str(ROOT / "scripts" / "install.py"),
+            [sys.executable, str(ROOT / "setup" / "install.py"),
              "--skills-dir", str(ROOT / "skills"), "--force"],
             text=True, capture_output=True,
         )

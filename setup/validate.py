@@ -8,7 +8,7 @@ import sys
 try:
     import yaml
 except ImportError:
-    raise SystemExit("Install validation dependencies: python -m pip install -r requirements-dev.txt")
+    raise SystemExit("Install validation dependencies: python -m pip install -r setup/requirements-dev.txt")
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED = {
