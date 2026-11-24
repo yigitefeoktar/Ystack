@@ -53,7 +53,7 @@ Codex normally discovers skill changes automatically. If a skill does not appear
 
 ### Personal AGENTS.md
 
-[AGENTS.md](AGENTS.md) is the author's actual global preference file. It covers simple game UI, generated artwork, no native game scrollbars, SVG comparisons for small visual changes, generated concepts for major designs, and quiet URL links at the bottom of responses.
+[AGENTS.md](AGENTS.md) is the author's actual global preference file. It covers simple game UI, generated artwork, no native game scrollbars, code-rendered comparisons for small visual changes, generated concepts for major designs, and quiet URL links at the bottom of responses.
 
 Read it before adopting it. The recommended approach is to merge the preferences you want into your existing `$CODEX_HOME/AGENTS.md` (usually `~/.codex/AGENTS.md`). They are preferences, not a universal requirement for every developer.
 
